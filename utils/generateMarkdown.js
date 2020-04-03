@@ -1,13 +1,13 @@
 // TODO: Return markdown string for README file given a data object.
 function generateMarkdown(data) {
   return `
-# ${data.title}
+# ${data[0].title}
 
-![${data.title}](https://img.shields.io/github/languages/top/${data.login}/${data.title})
+![${data[0].title}](https://img.shields.io/github/languages/top/${data[1].login}/${data[1].title})
 
 ## Description 
 
-${data.description}
+${data[0].description}
 
 
 ## Table of Contents
@@ -24,36 +24,38 @@ ${data.description}
 
 ## Installation
 
-${data.installation}
+${data[0].installation}
 
 ## Usage 
 
-${data.usage}
+${data[0].usage}
 
 
 ## Contributing
 
-${data.contributing}
+${data[0].contributing}
 
 
 ## License
 
-${data.license}
+${data[0].license}
 
 
 ## Tests
 
-${data.test}
+${data[0].tests}
+
 
 ## Questions
 
-${data.questions}
+${data[0].questions}
+
 
 ## Contact
 
-${data.email}
+Email: ${data[1].email}
 
-![${data.login} avatar](${data.avatar_url})
+![${data[1].login} avatar](${data[1].avatar_url})
 
 `;
 }
