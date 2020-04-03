@@ -19,7 +19,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
   {
   type: "input",
-  name: "github",
+  name: "username",
   message: "What is your GitHub username?"
   },
   {
@@ -78,9 +78,16 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions)
   .then(answers => {
-
-  }).catch(error => {
+    const username = answers.username;
+    api.getUser(username)
+  })
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
     console.log("Something went wrong! Try again.")
+    process.exit(1);
   });
 }
 
