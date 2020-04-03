@@ -69,6 +69,8 @@ const questions = [
 // current working directory to file named for the fileName parameter.
 // The data parameter is the text to write to the file.
 function writeToFile(fileName, data) {
+  generateMarkdown(data);
+
 }
 
 // TODO: Use inquirer to prompt the user for each question in the
@@ -83,6 +85,7 @@ function init() {
   })
   .then((response) => {
     console.log(response.data);
+    writeToFile(fileName, response.data)
   })
   .catch(error => {
     console.log(error);
