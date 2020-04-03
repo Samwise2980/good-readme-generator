@@ -48,10 +48,7 @@ ${data[0].tests}
 
 ## Questions
 
-${data[0].questions}
-
-
-## Contact
+If you have any questions please contact me at:
 
 Email: ${data[1].email}
 
