@@ -10,7 +10,6 @@ const api = {
   // (Hint: Use axios to send a get request and return the promise created by calling axios.get())
   getUser(username) {
     var url = `https://api.github.com/users/${username}`;
-    console.log(url)
     return axios.get(url)
   }
 };

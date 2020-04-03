@@ -1,20 +1,9 @@
-// TODO: import fs, path and inquirer modules
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
 
-// TODO: import api and generateMarkdown modules from ./utils/
 const api = require("./utils/api");
 const generateMarkdown = require("./utils/generateMarkdown");
-
-// TODO: Add inquirer question objects to questions array. This should
-// include all the necessary questions for the user.
-// Example question:
-// {
-//   type: "input",
-//   name: "github",
-//   message: "What is your GitHub username?"
-// }
 
 const questions = [
   {
@@ -69,8 +58,9 @@ const questions = [
 // current working directory to file named for the fileName parameter.
 // The data parameter is the text to write to the file.
 function writeToFile(fileName, data) {
-  generateMarkdown(data);
-
+  return fs.writeFile(fileName, data, function(err, result) {
+    if(err) {console.log('error', err);}
+  });
 }
 
 // TODO: Use inquirer to prompt the user for each question in the
@@ -80,12 +70,20 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions)
   .then(answers => {
-    const username = answers.username;
+    const { username, title, description, installation, usage, license, contributing, tests, questions } = answers;
+
     return api.getUser(username);
   })
   .then((response) => {
-    console.log(response.data);
-    writeToFile(fileName, response.data)
+    const { email, login, avatar_url } = response.data
+    generateMarkdown
+  })
+  .then((data) => {
+    return writeToFile("./output/README.md" ,data);
+  })
+  .then(() => {
+
+    console.log("README is finished!")
   })
   .catch(error => {
     console.log(error);
