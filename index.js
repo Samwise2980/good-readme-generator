@@ -79,7 +79,7 @@ function init() {
   inquirer.prompt(questions)
   .then(answers => {
     const username = answers.username;
-    api.getUser(username)
+    return api.getUser(username);
   })
   .then((response) => {
     console.log(response.data);
