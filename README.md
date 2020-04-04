@@ -18,7 +18,7 @@ A README generator that will ask question in the terminal to generate a custom R
 
 You will be prompted for your GitHub usename, the title of the repo to help title the README and generate a badge, a description of your project, how would a user be able to get into the development side of the project, how would a user use the project, and contributors you have to mention, any licenses you want to add to the project, and any tests that you ran that a user could run to see it work.
 
-![Readme Prompts](assets/good-readme-screen.png)
+![Readme Prompts](assets/good-readme-screen.PNG)
 
 
 ## Tests
