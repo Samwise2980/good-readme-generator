@@ -12,7 +12,6 @@ A README generator that will ask question in the terminal to generate a custom R
 * [Usage](#usage)
 * [Tests](#tests)
 * [Questions](#questions)
-* [Contact](#contact)
 
 
 ## Usage 

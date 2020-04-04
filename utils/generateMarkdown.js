@@ -17,7 +17,6 @@ ${data[0].description}
 * [License](#license)
 * [Tests](#tests)
 * [Questions](#questions)
-* [Contact](#contact)
 
 
 

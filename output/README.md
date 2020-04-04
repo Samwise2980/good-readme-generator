@@ -16,7 +16,6 @@ A simple weather dashboard to show you the current weather.
 * [License](#license)
 * [Tests](#tests)
 * [Questions](#questions)
-* [Contact](#contact)
 
 
 
