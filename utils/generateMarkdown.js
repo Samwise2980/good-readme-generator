@@ -2,7 +2,7 @@ function generateMarkdown(data) {
   return `
 # ${data[0].title}
 
-![${data[0].title}](https://img.shields.io/github/languages/top/${data[1].login}/${data[1].title})
+![${data[0].title}](https://img.shields.io/github/languages/top/${data[1].login}/${data[0].title})
 
 ## Description 
 
