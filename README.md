@@ -23,7 +23,7 @@ You will be prompted for your GitHub usename, the title of the repo to help titl
 
 ## Tests
 
-I ran this will a few usernames and repo names to see the different results and user photos it would pull.
+I ran this a few usernames and repo names to see the different results and user photos it would pull.
 
 
 ## Questions
